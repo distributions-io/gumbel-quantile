@@ -1,11 +1,11 @@
 options( digits = 16 )
 library( jsonlite )
+library( FAdist )
 
-
-mu = 0
-beta = 1
+mu = 2
+beta = 3
 probs = seq( 0, 1, 0.01 )
-y = qgumbel( probs, mu, beta )
+y = qgumbel( probs, beta, mu )
 
 cat( y, sep = ",\n" )
 
