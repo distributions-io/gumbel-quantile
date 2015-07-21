@@ -174,7 +174,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 
 		actual = quantile( data, {
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.notEqual( actual, data );
 
@@ -187,7 +187,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		actual = quantile( data, {
 			'copy': false,
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.strictEqual( actual, data );
 
@@ -219,7 +219,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 
 		actual = quantile( data, {
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.notEqual( actual, data );
 
@@ -233,7 +233,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		actual = quantile( data, {
 			'copy': false,
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		expected = new Float32Array( validationData.expected.map( function( d ) {
 			if (d === 'Inf' ) {
@@ -275,7 +275,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		actual = quantile( data, {
 			'dtype': 'float32',
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 
 		assert.notEqual( actual, data );
@@ -312,7 +312,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		actual = quantile( data, {
 			'accessor': getValue,
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.notEqual( actual, data );
 
@@ -327,7 +327,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 			'accessor': getValue,
 			'copy': false,
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.strictEqual( actual, data );
 
@@ -356,7 +356,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		actual = quantile( data, {
 			'path': 'x.1',
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 
 		expected = validationData.expected
@@ -389,7 +389,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 			'path': 'x/1',
 			'sep': '/',
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.strictEqual( actual, data );
 
@@ -422,7 +422,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		mat = matrix( d1, [5,5], 'float64' );
 		out = quantile( mat, {
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 
 		for ( i = 0; i < out.length; i++ ) {
@@ -435,7 +435,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		out = quantile( mat, {
 			'copy': false,
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 		assert.strictEqual( mat, out );
 
@@ -469,7 +469,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 		out = quantile( mat, {
 			'dtype': 'float32',
 			'mu': validationData.mu,
-		'beta': validationData.beta
+			'beta': validationData.beta
 		});
 
 		assert.strictEqual( out.dtype, 'float32' );
