@@ -144,7 +144,7 @@ describe( 'distributions-gumbel-quantile', function tests() {
 			for ( var i = 0; i < data.length; i++ ) {
 				actual =  quantile( data[ i ], {
 					'mu': validationData.mu,
-		'beta': validationData.beta
+					'beta': validationData.beta
 				});
 				if ( isFiniteNumber( actual ) && isFiniteNumber( expected[ i ] ) ) {
 					assert.closeTo( actual, expected[ i ] , 1e-12 );
